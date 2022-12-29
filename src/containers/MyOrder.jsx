@@ -1,0 +1,43 @@
+import React, { useContext, useState } from 'react';
+import OrderItem from '@components/OrderItem';
+import AppContext from '@context/AppContext';
+import icon_arrow from '@images/icons/flechita.svg';
+import styles from '@styles/MyOrder.module.scss';
+
+const MyOrder = ({ setToggleOrders, toggleOrders }) => {
+  const { state } = useContext(AppContext);
+  const sumTotal = () => {
+    const reducer = (amount, currentValue) => amount + currentValue.price;
+    const sum = state.cart.reduce(reducer, 0);
+    return sum;
+  };
+  return (
+    <aside className={styles.MyOrder}>
+      <div className="title-container">
+        <img
+          src={icon_arrow}
+          alt="arrow"
+          onClick={() => {
+            setToggleOrders(!toggleOrders);
+          }}
+        />
+        <p className="title">My order</p>
+      </div>
+      <div className="my-order-content">
+        {state.cart.map((product, index) => (
+          <OrderItem indexValue={index} key={index} product={product} />
+        ))}
+
+        <div className="order">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>${sumTotal()}</p>
+        </div>
+        <button className="primary-button">Checkout</button>
+      </div>
+    </aside>
+  );
+};
+
+export default MyOrder;
