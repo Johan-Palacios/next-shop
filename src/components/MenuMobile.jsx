@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '@styles/MenuMobile.module.scss';
 import close from '@images/icons/icon_close.png';
 
-function MenuMobile({ onCerrar }) {
+function MenuMobile({ props }) {
   return (
     <div className={styles.MenuMobile}>
-      <img src={close} alt="close menu" className="close" onClick={onCerrar} />
+      <Image src={close} alt="close menu" className={styles.close} onClick={props} />
       <div>
         <ul>
           <li>

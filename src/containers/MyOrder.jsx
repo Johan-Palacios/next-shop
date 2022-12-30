@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import OrderItem from '@components/OrderItem';
 import AppContext from '@context/AppContext';
 import icon_arrow from '@images/icons/flechita.svg';
@@ -13,28 +15,30 @@ const MyOrder = ({ setToggleOrders, toggleOrders }) => {
   };
   return (
     <aside className={styles.MyOrder}>
-      <div className="title-container">
-        <img
+      <div className={styles['title-container']}>
+        <Image
           src={icon_arrow}
           alt="arrow"
           onClick={() => {
             setToggleOrders(!toggleOrders);
           }}
         />
-        <p className="title">My order</p>
+        <p className={styles.title}>My order</p>
       </div>
-      <div className="my-order-content">
+      <div className={styles['my-order-content']}>
         {state.cart.map((product, index) => (
           <OrderItem indexValue={index} key={index} product={product} />
         ))}
 
-        <div className="order">
+        <div className={styles.order}>
           <p>
             <span>Total</span>
           </p>
           <p>${sumTotal()}</p>
         </div>
-        <button className="primary-button">Checkout</button>
+        <button className={styles['primary-button']}>
+          <Link href="/checkout">Checkout</Link>
+        </button>
       </div>
     </aside>
   );
