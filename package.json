@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src/ --fix"
+    "lint:fix": "eslint src/ --fix && prettier src/ --write"
   },
   "dependencies": {
     "@next/font": "13.1.1",

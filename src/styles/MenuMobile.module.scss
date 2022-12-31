@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--white);;
+  background: var(--white);
 }
 .mobile-menu a {
   text-decoration: none;
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: 800px) {
-    .mobile-menu {
-        display: none;
-    }
+  .mobile-menu {
+    display: none;
+  }
 }

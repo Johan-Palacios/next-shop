@@ -1,74 +1,69 @@
-import React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import React from 'react';
+import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
 // Containers
-import Layout from "@containers/Layout";
+import Layout from '@containers/Layout';
 // Pages
-import Home from "@pages/Home";
-import Login from "@pages/Login";
-import PasswordRecovery from "@pages/PasswordRecovery";
-import SendEmail from "@pages/SendEmail";
-import NewPassword from "@pages/NewPassword";
-import MyAccount from "@pages/MyAccount";
-import CreateAccount from "@pages/CreateAccount";
-import Checkout from "@pages/Checkout";
-import Orders from "@pages/Orders";
-import NotFound from "@pages/NotFound";
+import Home from '@pages/Home';
+import Login from '@pages/Login';
+import PasswordRecovery from '@pages/PasswordRecovery';
+import SendEmail from '@pages/SendEmail';
+import NewPassword from '@pages/NewPassword';
+import MyAccount from '@pages/MyAccount';
+import CreateAccount from '@pages/CreateAccount';
+import Checkout from '@pages/Checkout';
+import Orders from '@pages/Orders';
+import NotFound from '@pages/NotFound';
 // Context
-import AppContext from "@context/AppContext";
-import useInitialState from "@hooks/useInitialState";
+import AppContext from '@context/AppContext';
+import useInitialState from '@hooks/useInitialState';
 // Styles
-import "@styles/global.scss";
+import '@styles/global.scss';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home></Home>,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <Login></Login>,
   },
   {
-    path: "recovery-password",
+    path: 'recovery-password',
     element: <PasswordRecovery></PasswordRecovery>,
   },
   {
-    path: "send-email",
+    path: 'send-email',
     element: <SendEmail></SendEmail>,
   },
   {
-    path: "new-password",
+    path: 'new-password',
     element: <NewPassword></NewPassword>,
   },
   {
-    path: "account",
+    path: 'account',
     element: <MyAccount></MyAccount>,
   },
   {
-    path: "signup",
+    path: 'signup',
     element: <CreateAccount></CreateAccount>,
   },
   {
-    path: "checkout",
+    path: 'checkout',
     element: <Checkout></Checkout>,
   },
   {
-    path: "orders",
+    path: 'orders',
     element: <Orders></Orders>,
   },
   {
-    path: "*",
+    path: '*',
     element: <NotFound></NotFound>,
   },
 ]);
 const App = () => {
   const initialState = useInitialState();
-  const basenamerouter = "/react-shop-course";
+  const basenamerouter = '/react-shop-course';
   return (
     <AppContext.Provider value={initialState}>
       <Layout>
