@@ -12,11 +12,11 @@ const ProductItem = ({ product }) => {
   const handleClick = (item) => {
     addToCart(item);
   };
+
   const validateImage = (image) => {
     if (/^https:\/\/api\.lorem\.space\/image*/i.test(image)) {
       return image;
     }
-    return close_icon;
   };
 
   return (
