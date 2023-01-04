@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <meta charset="UTF-8"></meta>
+        <meta charSet="UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <title>Next Shop</title>
         <meta name="description" content="Next Shop"></meta>

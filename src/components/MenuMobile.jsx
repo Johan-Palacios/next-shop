@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '@styles/MenuMobile.module.scss';
 import close from '@images/icons/icon_close.png';
+import Link from 'next/link';
 
 function MenuMobile({ props }) {
   return (
@@ -10,46 +11,46 @@ function MenuMobile({ props }) {
       <div>
         <ul>
           <li>
-            <a href="/">CATEGORIES</a>
+            <Link href="/">CATEGORIES</Link>
           </li>
           <li>
-            <a href="/">All</a>
+            <Link href="/">All</Link>
           </li>
           <li>
-            <a href="/">Cloth</a>
+            <Link href="/">Cloth</Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">Electronics</Link>
           </li>
           <li>
-            <a href="/">Furniture</a>
+            <Link href="/">Furniture</Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">Toys</Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">Others</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <a href="/">My orders</a>
+            <Link href="/">My orders</Link>
           </li>
           <li>
-            <a href="/">My Account</a>
+            <Link href="/">My Account</Link>
           </li>
         </ul>
       </div>
       <ul>
         <li>
-          <a href="/" className="email">
+          <Link href="/" className="email">
             platzi@example.com
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className="sign-out">
+          <Link href="/" className="sign-out">
             Sign out
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
