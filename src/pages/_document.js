@@ -3,11 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
-      <body>
+      <Head>
         <meta charSet="UTF-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <title>Next Shop</title>
         <meta name="description" content="Next Shop"></meta>
         <meta name="robots" content="index,follow"></meta>
         <NextScript async src="https://www.googletagmanager.com/gtag/js?id=G-JCYGGMNXFL"></NextScript>
@@ -21,6 +19,8 @@ export default function Document() {
             gtag('config', 'G-JCYGGMNXFL');`,
           }}
         />
+      </Head>
+      <body>
         <Main />
         <NextScript />
       </body>
