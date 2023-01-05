@@ -3,10 +3,9 @@ import Image from 'next/image';
 import AppContext from '@context/AppContext';
 import add_cart from '@images/icons/bt_add_to_cart.svg';
 import added_cart from '@images/icons/bt_added_to_cart.svg';
-// import close_icon from '@images/icons/icon_close.png';
 import styles from '@styles/ProductItem.module.scss';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product} ) => {
   const { addToCart, state } = useContext(AppContext);
   const itsProductAdded = () => state.cart.some((item) => item.id === product.id);
   const handleClick = (item) => {
@@ -15,7 +14,7 @@ const ProductItem = ({ product }) => {
 
   return (
     <div className={styles.ProductItem}>
-      <Image src={product.images[0]} alt={product.title} width={300} height={300} />
+      <Image src={product.images[0]} alt={product?.title} width={300} height={300} />
       <div className={styles['product-info']}>
         <div>
           <p>${product.price}</p>
