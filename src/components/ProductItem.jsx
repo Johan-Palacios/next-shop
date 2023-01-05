@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import AppContext from '@context/AppContext';
 import add_cart from '@images/icons/bt_add_to_cart.svg';
 import added_cart from '@images/icons/bt_added_to_cart.svg';
-import close_icon from '@images/icons/icon_close.png';
+// import close_icon from '@images/icons/icon_close.png';
 import styles from '@styles/ProductItem.module.scss';
 
 const ProductItem = ({ product }) => {
@@ -13,15 +13,9 @@ const ProductItem = ({ product }) => {
     addToCart(item);
   };
 
-  const validateImage = (image) => {
-    if (/^https:\/\/api\.lorem\.space\/image*/i.test(image)) {
-      return image;
-    }
-  };
-
   return (
     <div className={styles.ProductItem}>
-      <img src={validateImage(product.images[0])} alt={product.title} />
+      <Image src={product.images[0]} alt={product.title} width={300} height={300} />
       <div className={styles['product-info']}>
         <div>
           <p>${product.price}</p>

@@ -27,6 +27,8 @@ const Header = () => {
     <nav className={styles.Nav}>
       <div className={styles.iconContainer}>
         <Image
+          width={30}
+          height={30}
           src={icon_menu}
           alt="menu"
           className={styles.menu}
@@ -41,7 +43,7 @@ const Header = () => {
       <div className={styles['navbar-left']}>
         <div className={styles.iconContainer}>
           <Link href="/">
-            <Image src={logo_yard_sale} alt="logo" className={styles['nav-logo']} />
+            <Image src={logo_yard_sale} alt="logo" className={styles['nav-logo']} width={30} height={30} />
           </Link>
         </div>
         <ul>

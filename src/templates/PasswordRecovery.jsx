@@ -1,12 +1,13 @@
 import React from 'react';
 import '@styles/PasswordRecovery.scss';
 import logo_yard_sale from '@images/logos/logo_yard_sale.svg';
+import Image from 'next/image';
 
 const PasswordRecovery = () => {
   return (
     <div className="PasswordRecovery">
       <div className="PasswordRecovery-container">
-        <img src={logo_yard_sale} alt="logo" className="logo" />
+        <Image src={logo_yard_sale} alt="logo" className="logo" />
         <h1 className="title">Password recovery</h1>
         <p className="subtitle">Inform the email address used to create your account</p>
         <form action="/" className="form">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useGetProducts from '@hooks/useGetProducts';
 import ProductItem from '@components/ProductItem';
 import styles from '@styles/ProductList.module.scss';
