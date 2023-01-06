@@ -16,10 +16,16 @@
   background-color: $--white;
   animation: swipeLeft 0.26s ease;
 }
+
 .title-container {
   display: flex;
   align-items: center;
 }
+
+.title-container :first-child {
+  cursor: pointer;
+}
+
 .MyOrder-container {
   position: sticky;
   bottom: 0;
