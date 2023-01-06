@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['api.lorem.space', 'placeimg.com'],
+    domains: ['api.lorem.space', 'placeimg.com', 'cdn.shopify.com'],
   },
   // env: {
   //   customKey: 'customValue',
